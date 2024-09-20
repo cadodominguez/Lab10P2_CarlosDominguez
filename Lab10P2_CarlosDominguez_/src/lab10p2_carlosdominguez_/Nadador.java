@@ -4,14 +4,14 @@ package lab10p2_carlosdominguez_;
 public class Nadador {
     String nombre;
     String nacionalidad;
-    int edad;
-    double estatura;
+    String edad;
+    String estatura;
     String estilo;
     String DistanciaC;
     int segundosMR;
     int numMedallas;
 
-    public Nadador(String nombre, String nacionalidad, int edad, double estatura, String estilo, String DistanciaC, int segundosMR, int numMedallas) {
+    public Nadador(String nombre, String nacionalidad, String edad, String estatura, String estilo, String DistanciaC, int segundosMR, int numMedallas) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
         this.edad = edad;
@@ -38,19 +38,19 @@ public class Nadador {
         this.nacionalidad = nacionalidad;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
-    public double getEstatura() {
+    public String getEstatura() {
         return estatura;
     }
 
-    public void setEstatura(double estatura) {
+    public void setEstatura(String estatura) {
         this.estatura = estatura;
     }
 
