@@ -700,7 +700,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
-
+    // bueno este fue mi ultimo lab y aunque pase mas hablando paja que haciendo no puedo negar que lo disfrute, ojala q por lo menos a uno de ustedes lo pueda ver mas adelante de la carrera y tambien espero que les vaya bien todo lo que hagan.
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame JSimulacion;
     private javax.swing.JPanel P1;
