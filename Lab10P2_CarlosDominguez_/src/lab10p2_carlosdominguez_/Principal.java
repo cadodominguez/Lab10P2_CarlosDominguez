@@ -66,9 +66,16 @@ public class Principal extends javax.swing.JFrame {
         comboB_estiloN = new javax.swing.JComboBox<>();
         comboB_DistanciaC = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        text_n_Pais = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        num_medallas_ob_pais = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
         JSimulacion.setMinimumSize(new java.awt.Dimension(816, 502));
 
@@ -261,37 +268,13 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Creacion de Nadadores", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
-
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Agregando un pais....");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(781, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Creacion de pais", jPanel2);
-
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 939, Short.MAX_VALUE)
+            .addGap(0, 961, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,6 +282,97 @@ public class Principal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Creacion de Eventos", jPanel3);
+
+        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Agregando un pais....");
+
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Nombre:");
+
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Numero de medallas Obtenidas:");
+
+        text_n_Pais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_n_PaisActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+
+        jButton2.setText("Agregar Pais");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(text_n_Pais)
+                                    .addComponent(num_medallas_ob_pais, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(jButton2)))
+                .addContainerGap(591, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel14)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel15)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_n_Pais, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(num_medallas_ob_pais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61)
+                .addComponent(jButton2)
+                .addContainerGap(68, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel14)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel15)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane1.addTab("Creacion de pais", jPanel2);
 
         javax.swing.GroupLayout P1Layout = new javax.swing.GroupLayout(P1);
         P1.setLayout(P1Layout);
@@ -370,6 +444,25 @@ public class Principal extends javax.swing.JFrame {
         }
         actualizar_archivos_bi();
     }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void text_n_PaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_n_PaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_n_PaisActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       // agregar pais
+       Pais nuevo = new Pais(text_n_Pais.getText(),Integer.parseInt(num_medallas_ob_pais.getText()));
+       ArrayList <Nadador> per_pais = new ArrayList();
+        for (int i = 0; i < lista_n_t.size(); i++) {
+            Nadador temp = lista_n_t.get(i);
+            if (temp.getNacionalidad().equalsIgnoreCase(nuevo.getNombre())) {
+                per_pais.add(temp);
+            }
+        }
+        nuevo.setLista_n(per_pais);
+       lista_p.add(nuevo);
+       actualizar_archivos_bi();
+    }//GEN-LAST:event_jButton2ActionPerformed
     public void actualizar_archivos_bi(){
             File sel = new File("nadadores.tar");
             try{
@@ -386,7 +479,7 @@ public class Principal extends javax.swing.JFrame {
             try{
                 FileOutputStream fs = new FileOutputStream(sel);
                 ObjectOutputStream writer = new ObjectOutputStream(fs);
-                writer.writeObject(lista_n_t);//guardando el objeto en el archivo
+                writer.writeObject(lista_p);//guardando el objeto en el archivo
                 writer.close();
                 //System.out.println("Se actualizo el archivo la lista de paises");
             }catch(IOException e){
@@ -397,7 +490,7 @@ public class Principal extends javax.swing.JFrame {
             try{
                 FileOutputStream fs = new FileOutputStream(sel);
                 ObjectOutputStream writer = new ObjectOutputStream(fs);
-                writer.writeObject(lista_n_t);//guardando el objeto en el archivo
+                writer.writeObject(lista_even);//guardando el objeto en el archivo
                 writer.close();
                 //System.out.println("Se actualizo el archivo la lista de eventos");
             }catch(IOException e){
@@ -470,9 +563,14 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboB_Paises;
     private javax.swing.JComboBox<String> comboB_estiloN;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -488,8 +586,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField num_ganadas;
     private javax.swing.JTextField num_ganadas1;
+    private javax.swing.JTextField num_medallas_ob_pais;
     private javax.swing.JTextField text_edad;
     private javax.swing.JTextField text_estatura;
+    private javax.swing.JTextField text_n_Pais;
     private javax.swing.JTextField text_nombre;
     private javax.swing.JTextField txt_tiempomasRapido;
     // End of variables declaration//GEN-END:variables
