@@ -573,6 +573,7 @@ public class Principal extends javax.swing.JFrame {
             }
             iniciador = 1;
         }
+        comboB_Paises.removeAllItems();
         for (int i = 0; i < lista_p.size(); i++) {
             comboB_Paises.addItem(lista_p.get(i).getNombre());
         }
@@ -598,7 +599,7 @@ public class Principal extends javax.swing.JFrame {
                 per_pais.add(temp);
             }
         }
-        nuevo.setLista_n(per_pais);
+       nuevo.setLista_n(per_pais);
        lista_p.add(nuevo);
        actualizar_archivos_bi();
     }//GEN-LAST:event_jButton2ActionPerformed
