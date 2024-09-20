@@ -2,10 +2,14 @@
 package lab10p2_carlosdominguez_;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +21,7 @@ public class Principal extends javax.swing.JFrame {
     static ArrayList<Nadador> lista_n_t = new ArrayList();
     static ArrayList<Pais> lista_p = new ArrayList();
     static ArrayList<Evento> lista_even = new ArrayList();
+    static int iniciador = 0;
     
     public Principal() {
         initComponents();
@@ -25,7 +30,6 @@ public class Principal extends javax.swing.JFrame {
         JSimulacion.setVisible(true);
         JSimulacion.setLocationRelativeTo(this);
         JSimulacion.setTitle("SIMULACION");
-        
     }
 
     /**
@@ -63,6 +67,7 @@ public class Principal extends javax.swing.JFrame {
         comboB_DistanciaC = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
         JSimulacion.setMinimumSize(new java.awt.Dimension(816, 502));
@@ -258,15 +263,24 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Agregando un pais....");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 939, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(781, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 267, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Creacion de pais", jPanel2);
@@ -338,6 +352,14 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        if (iniciador == 0) {
+            try {
+                traer_archivos();
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            iniciador = 1;
+        }
         for (int i = 0; i < lista_p.size(); i++) {
             comboB_Paises.addItem(lista_p.get(i).getNombre());
         }
@@ -381,6 +403,30 @@ public class Principal extends javax.swing.JFrame {
             }catch(IOException e){
                 System.out.println("Errror: "+e.getLocalizedMessage());
             }
+    }
+    public void traer_archivos() throws ClassNotFoundException{
+        try {
+            FileInputStream fs = new FileInputStream("nadadores.tar");
+            ObjectInputStream reader = new ObjectInputStream(fs);
+            lista_n_t = (ArrayList<Nadador>) reader.readObject();
+        } catch (IOException e) {
+                System.out.println("Error ");
+        }
+        try {
+            FileInputStream fs = new FileInputStream("Lista de Paises.tar");
+            ObjectInputStream reader = new ObjectInputStream(fs);
+            lista_p = (ArrayList<Pais>) reader.readObject();
+        } catch (IOException e) {
+                System.out.println("Error ");
+        }
+        try {
+            FileInputStream fs = new FileInputStream("Lista de eventos.tar");
+            ObjectInputStream reader = new ObjectInputStream(fs);
+            lista_even = (ArrayList<Evento>) reader.readObject();
+        } catch (IOException e) {
+                System.out.println("Error ");
+        }
+        
     }
     /**
      * @param args the command line arguments
@@ -426,6 +472,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
